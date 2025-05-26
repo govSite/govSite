@@ -21,4 +21,5 @@ export default defineConfig({
         notFound: resolve(__dirname, "index.html"),
       },
     },
+  },
 });
