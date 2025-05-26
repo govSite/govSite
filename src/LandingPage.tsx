@@ -36,8 +36,8 @@ export function LandingPage() {
           <p className="text-gray-600 mb-1">
             Access our services and file grievances quickly and efficiently
           </p>
-          <div className="flex flex-col items-center bottom-10 gap-4 left-10 fixed mt-6 bg-orange-100 text-orange-800 px-10 py-4 rounded-xl shadow-md border border-orange-300">
-            <img src={shinde} className="w-60 rounded-2xl" alt="" />
+          <div className="flex flex-col items-center bottom-10 gap-4 left-10 fixed mt-6 bg-orange-100/60 text-orange-800 px-10 py-4 rounded-xl shadow-md border border-orange-300">
+            <img src={shinde} className="w-20 lg:w-60 rounded-2xl" alt="" />
             <div className="text-4xl font-extrabold leading-tight">
               {grievancesSolved.toLocaleString()}
             </div>

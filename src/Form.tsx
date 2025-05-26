@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+import { toast } from "sonner";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -70,7 +71,9 @@ export function Form() {
     }
 
     console.log("Form submitted:", formData);
-    // Handle form submission here
+    toast("Grievance has been submitted", {
+      description: "you can safely leave this page now",
+    });
   };
 
   const handleClear = () => {

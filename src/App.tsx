@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { LandingPage } from "./LandingPage";
 import { Header } from "./lib/Header";
 import { Form } from "./Form";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<LandingPage />} />
         <Route path="form" element={<Form />} />
       </Routes>
+      <Toaster />
     </div>
   );
 }
