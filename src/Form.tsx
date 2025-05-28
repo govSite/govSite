@@ -1,9 +1,8 @@
 "use client";
 
 import type React from "react";
-import { toast } from "sonner";
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -26,6 +25,7 @@ import {
 } from "lucide-react";
 
 export function Form() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -71,8 +71,13 @@ export function Form() {
     }
 
     console.log("Form submitted:", formData);
-    toast("Grievance has been submitted", {
-      description: "you can safely leave this page now",
+
+    // Navigate to success page
+    navigate("/form-submitted", {
+      state: {
+        submissionData: formData,
+        submissionTime: new Date().toISOString(),
+      },
     });
   };
 
@@ -208,7 +213,7 @@ export function Form() {
                           Medical Services
                         </div>
                       </SelectItem>
-                      <SelectItem value="Medical" className="flex items-center">
+                      <SelectItem value="SRA" className="flex items-center">
                         <div className="flex items-center gap-2">
                           <Stethoscope className="w-4 h-4" />
                           SRA (Slum Rehabilitation Authority)

@@ -3,6 +3,7 @@ import { LandingPage } from "./LandingPage";
 import { Header } from "./lib/Header";
 import { Form } from "./Form";
 import { Toaster } from "@/components/ui/sonner";
+import { FormSubmitted } from "./FormSubmitted";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route index element={<LandingPage />} />
         <Route path="form" element={<Form />} />
+        <Route path="form-submitted" element={<FormSubmitted />} />
       </Routes>
       <Toaster />
     </div>
